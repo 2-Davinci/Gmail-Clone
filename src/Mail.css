@@ -1,0 +1,73 @@
+.mail {
+  flex: 1;
+  background-color: whitesmoke;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.mail__tools {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid whitesmoke;
+  position: sticky;
+  top: -5px;
+
+  z-index: 99;
+  border-radius: 10px;
+}
+.mail__toolsLeft {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mail__body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 30px;
+  background-color: white;
+  padding: 20px;
+  height: 100vh;
+  box-shadow: 0 5px 7px 5px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+}
+.mail__bodyHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  position: relative;
+  flex-wrap: wrap;
+}
+.mail__bodyHeader h2 {
+  font-weight: 400;
+  margin-right: 20px;
+  padding: 20px;
+  position: relative;
+}
+.mail__bodyHeader p {
+  margin-left: 20px;
+}
+.mail__important {
+  color: #e8ab02;
+}
+.mail__toolsLeft .delete {
+  border-right: 1px solid lightgray;
+  border-radius: 0;
+  margin-right: 10px;
+}
+.mail__toolsLeft .task {
+  border-right: 1px solid lightgray;
+  border-radius: 0;
+  margin-right: 10px;
+}
+.mail__message p {
+  padding: 10px;
+  margin-right: 20px;
+  overflow-wrap: break-word;
+}
+.mail__time {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  font-size: 12px;
+  color: gray;
+}

@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Avatar, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import TuneIcon from "@mui/icons-material/Tune";
+import "./Header.css";
 import SettingsIcon from "@mui/icons-material/Settings";
 import HelpIcon from "@mui/icons-material/Help";
 import AppsIcon from "@mui/icons-material/Apps";

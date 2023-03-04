@@ -1,0 +1,21 @@
+.widget {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.widgetIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+}
+
+.icon__add {
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+}
+.widgetIcon .icons {
+  margin-top: 20px;
+}
