@@ -12,11 +12,21 @@ import AttachFileIcon from "@mui/icons-material/AttachFile";
 import { IconButton } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { closeSendMessage } from "./Features/mailSlice";
+import { db } from "./firebase";
+import firebase from "firebase/compat/app";
+
 const SendMail = () => {
   const { register, handleSubmit } = useForm();
   const dispatch = useDispatch(closeSendMessage);
   const onsubmit = (formData) => {
     console.log(formData);
+    db.collection("emails").add({
+      to: formData.to,
+      subject: formData.subject,
+      message: formData.message,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    dispatch(closeSendMessage());
   };
   return (
     <div className="sendMail">

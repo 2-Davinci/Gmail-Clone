@@ -1,6 +1,5 @@
-import React from "react";
 import { IconButton } from "@mui/material";
-
+import React from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ErrorIcon from "@mui/icons-material/Error";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -13,13 +12,16 @@ import LabelIcon from "@mui/icons-material/Label";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useNavigate } from "react-router-dom";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import LabelImportantOutlinedIcon from "@mui/icons-material/LabelImportantOutlined";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 import "./Mail.css";
+import LabelImportantOutlined from "@mui/icons-material/LabelImportantOutlined";
+import { useSelector } from "react-redux";
+import { selectOpenMail } from "./Features/mailSlice";
 const Mail = () => {
+  const selectedMail = useSelector(selectOpenMail);
   const navigate = useNavigate();
   return (
     <div className="mail">
@@ -73,13 +75,13 @@ const Mail = () => {
       </div>
       <div className="mail__body">
         <div className="mail__bodyHeader">
-          <h2>Subject</h2>
-          <LabelImportantOutlinedIcon className="mail__important" />
-          <p>Title</p>
-          <p className="mail__time">10pm</p>
+          <h2>{selectedMail.subject}</h2>
+          <LabelImportantOutlined className="mail__important" />
+          <p>{selectedMail.title}</p>
+          <p className="mail__time">{selectedMail.time}</p>
         </div>
         <div className="mail__message">
-          <p>This is a message</p>
+          <p>{selectedMail.description}</p>
         </div>
       </div>
     </div>
